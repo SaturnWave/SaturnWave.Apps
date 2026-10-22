@@ -1,0 +1,2 @@
+# app-ads.txt for SaturnWave games.
+# The authorised sellers' lines (for example AdMob's) are added here when a game shows ads.

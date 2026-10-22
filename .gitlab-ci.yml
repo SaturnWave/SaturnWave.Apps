@@ -1,0 +1,17 @@
+# Builds the static site and publishes it with GitLab Pages on every push to the default branch.
+image: node:22-alpine
+
+pages:
+  stage: deploy
+  script:
+    - npm ci
+    # Pages serves the site at the root of its own domain or under /<project>/; Next.js needs that path.
+    - export PAGES_BASE_PATH="$(node -e 'process.stdout.write(new URL(process.env.CI_PAGES_URL).pathname)')"
+    - npm run build
+    # Next.js writes the site to out/; GitLab Pages publishes public/ (the source public/ is already copied into out/).
+    - rm -rf public && mv out public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
