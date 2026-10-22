@@ -9,6 +9,13 @@ The public pages the app stores ask for, for every SaturnWave game:
 It is a Next.js site with a static export (`output: "export"`), written in TypeScript and published by GitLab Pages
 (`.gitlab-ci.yml`).
 
+## GitLab settings it needs
+
+- The project and its group are public, or at least Pages is open to everyone (Settings > General > Visibility):
+  stores must reach the privacy policy without signing in.
+- Deploy > Pages > "Use unique domain" on, so the site, and with it `app-ads.txt`, sits at the root of its domain.
+- The account running the pipeline is verified for GitLab's shared runners.
+
 ## Adding a game
 
 Add an entry to `src/content/games.ts`: its slug (it goes into the store listing, so it never changes), its names,
