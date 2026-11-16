@@ -236,7 +236,192 @@ const museumPuzzle: Game = {
   },
 };
 
-export const games: readonly Game[] = [museumPuzzle];
+const pastelRows: Game = {
+  slug: "pastel-rows",
+  name: { en: "Pastel Rows", tr: "Pastel Rows" },
+  workingTitle: false,
+  summary: {
+    en: "A calm block puzzle: place pieces on a square grid and clear full rows and columns, in Classic, Adventure, a Daily puzzle and a weekly League.",
+    tr: "Sakin bir blok bulmacası: parçaları kare bir ızgaraya yerleştirip dolu satır ve sütunları temizlersin; Klasik, Macera, Günlük bulmaca ve haftalık Lig.",
+  },
+  androidPackage: "com.saturnwave.pastelrows",
+  privacy: {
+    en: {
+      title: "Privacy Policy",
+      updated: "16 November 2026",
+      intro:
+        "This policy explains what the game Pastel Rows, made by SaturnWave, does with your data. It applies to the current version of the game on Android.",
+      sections: [
+        {
+          heading: "In short",
+          paragraphs: [
+            "Classic and Adventure play on your phone without an account. The first time you open the Daily puzzle or the League, the game opens an anonymous player account on the servers of Unity Gaming Services, so that scores can be checked and ranked fairly. The game never asks for your name, e-mail address or password. This version has no purchases, no advertising and no analytics, and sends no advertising ID.",
+          ],
+        },
+        {
+          heading: "Who is responsible",
+          paragraphs: [
+            "SaturnWave (Arcan Caglayan), Edmonton, Alberta, Canada, is responsible for the data described here. You can reach us at saturnwave.apps@gmail.com.",
+          ],
+        },
+        {
+          heading: "What stays on your phone",
+          paragraphs: [
+            "The game keeps your progress, your records, your wallet (gold, lives and boosters), your settings and your unfinished Daily and League attempts on your phone.",
+            "The reminders you can turn on (lives refilled, a new Daily puzzle) are planned on the phone itself; nothing is sent for them.",
+          ],
+        },
+        {
+          heading: "Your player account",
+          paragraphs: [
+            "The account has a random player ID and a display name the game makes from two words and a number, for example \"Amber Fox 4821\". You cannot type a name, and no text you write is sent.",
+            "The account holds your gold balance, the rewards you claimed and your Daily, Tournament and League attempts: the moves you made and your score. Our server code at Unity replays every attempt to check its score, so a changed game cannot send a false one. The account is kept until you delete it.",
+          ],
+        },
+        {
+          heading: "What other players see",
+          paragraphs: [
+            "Your display name and your scores appear on the Daily and Tournament boards and in your League group. League groups may include computer players; they are always marked as bots. Boards are deleted after 35 days and League groups after 5 weeks.",
+          ],
+        },
+        {
+          heading: "What Unity receives",
+          paragraphs: [
+            "Unity Technologies runs the player account, its storage, our server code and the boards for us (Unity Gaming Services). When the game connects, Unity's libraries also send Unity the technical data these services need, such as an ID Unity gives this installation, your phone's model and system version, the game's version and your connection's IP address. No advertising ID is sent. Unity keeps our server code's logs for 7 days; they never hold your player ID. Unity's own privacy policy applies to what Unity does with this data: https://unity.com/legal/privacy-policy",
+          ],
+        },
+        {
+          heading: "Backups, reinstalling and new phones",
+          paragraphs: [
+            "The game turns Android's automatic backup off. If you move to a new phone with Android's phone-to-phone transfer, the game's files and its sign-in may come along, and your account with them.",
+            "If you uninstall the game or change phones without such a transfer, the game starts over with a new account. The old account stays on the server until you ask us to delete it.",
+          ],
+        },
+        {
+          heading: "Deleting your data",
+          paragraphs: [
+            "In the game: Settings > Account > Delete account deletes your account and its gold, rewards, attempts and scores from the server; you choose whether the save on the phone is deleted too. Uninstalling the game deletes all of its data from the phone.",
+            "If you no longer have the game, write to saturnwave.apps@gmail.com with your player code (shown in Settings > Account) and we will delete your account within a few days.",
+            "After a deletion, scores already counted in a League group stay there without your name or ID until the group is deleted (at most 5 weeks), the anti-cheat checks keep an anonymous tag for 3 days, and the server logs are gone within 7 days. We keep an e-mail request with its player code for 30 days as the record of our reply. Nothing else stays.",
+          ],
+        },
+        {
+          heading: "Services we use",
+          paragraphs: [
+            "Unity Technologies (Unity Gaming Services: the player account, its storage, our server code and the boards) and Google (Google Play, which installs and updates the game). Unity may process data outside your country, including in the United States. We do not sell your data and do not share it with anyone else.",
+          ],
+        },
+        {
+          heading: "Legal basis and your rights",
+          paragraphs: [
+            "Where the GDPR or a similar law applies: the player account and its data are needed to provide the Daily puzzle, the Tournament and the League you open; the anti-cheat checks serve fair play for every player.",
+            "You can ask us for a copy of your data, to correct or delete it, or object to its use, by writing to saturnwave.apps@gmail.com. You can also complain to your data protection authority.",
+          ],
+        },
+        {
+          heading: "Children",
+          paragraphs: [
+            "The game is not directed at children under 13 and we do not knowingly collect personal data from them. If you believe a child under 13 has given us data, write to us and we will delete it.",
+          ],
+        },
+        {
+          heading: "Changes",
+          paragraphs: [
+            "If purchases, advertising or other services are added to the game, this policy will be updated before they arrive, and the game will ask for any consent they need. The date at the top shows the latest change.",
+          ],
+        },
+      ],
+    },
+    tr: {
+      title: "Gizlilik Politikası",
+      updated: "16 Kasım 2026",
+      intro:
+        "Bu politika, SaturnWave'in geliştirdiği Pastel Rows oyununun verilerinizle ne yaptığını anlatır. Oyunun Android'deki şu anki sürümü için geçerlidir.",
+      sections: [
+        {
+          heading: "Kısaca",
+          paragraphs: [
+            "Klasik ve Macera, telefonunuzda hesapsız oynanır. Günlük bulmacayı ya da Lig'i ilk açtığınızda oyun, skorlar doğrulanıp adil sıralanabilsin diye Unity Gaming Services'in sunucularında anonim bir oyuncu hesabı açar. Oyun adınızı, e-posta adresinizi ya da bir parola sormaz. Bu sürümde satın alma, reklam ve ölçüm yoktur; reklam kimliği gönderilmez.",
+          ],
+        },
+        {
+          heading: "Veri sorumlusu",
+          paragraphs: [
+            "Burada anlatılan verilerden SaturnWave (Arcan Caglayan), Edmonton, Alberta, Kanada sorumludur. Bize saturnwave.apps@gmail.com adresinden ulaşabilirsiniz.",
+          ],
+        },
+        {
+          heading: "Telefonunuzda kalanlar",
+          paragraphs: [
+            "Oyun ilerlemenizi, rekorlarınızı, cüzdanınızı (altın, can ve güçlendiriciler), ayarlarınızı ve bitmemiş Günlük ve Lig denemelerinizi telefonunuzda tutar.",
+            "Açabileceğiniz hatırlatmalar (canların doldu, yeni Günlük bulmaca) telefonun kendisinde planlanır; bunlar için hiçbir şey gönderilmez.",
+          ],
+        },
+        {
+          heading: "Oyuncu hesabınız",
+          paragraphs: [
+            "Hesabın rastgele bir oyuncu kimliği ve oyunun iki kelime ile bir sayıdan ürettiği bir görünen adı vardır, örneğin \"Kehribar Tilki 4821\". Ad yazamazsınız; yazdığınız hiçbir metin gönderilmez.",
+            "Hesap altın bakiyenizi, aldığınız ödülleri ve Günlük, Turnuva ve Lig denemelerinizi (yaptığınız hamleler ve skorunuz) tutar. Unity'deki sunucu kodumuz her denemeyi baştan oynatıp skorunu doğrular; böylece değiştirilmiş bir oyun yanlış skor gönderemez. Hesap, siz silene kadar saklanır.",
+          ],
+        },
+        {
+          heading: "Öteki oyuncuların gördükleri",
+          paragraphs: [
+            "Görünen adınız ve skorlarınız Günlük ve Turnuva tablolarında ve Lig grubunuzda görünür. Lig gruplarında bilgisayar oyuncuları olabilir; bunlar her zaman bot olarak işaretlenir. Tablolar 35 gün, Lig grupları 5 hafta sonra silinir.",
+          ],
+        },
+        {
+          heading: "Unity'ye gidenler",
+          paragraphs: [
+            "Oyuncu hesabını, saklama alanını, sunucu kodumuzu ve tabloları bizim adımıza Unity Technologies işletir (Unity Gaming Services). Oyun bağlandığında Unity'nin kütüphaneleri bu hizmetlerin gerektirdiği teknik verileri de Unity'ye gönderir: Unity'nin bu kuruluma verdiği bir kimlik, telefonunuzun modeli ve sistem sürümü, oyunun sürümü ve bağlantınızın IP adresi gibi. Reklam kimliği gitmez. Unity sunucu kodumuzun kayıtlarını 7 gün tutar; bu kayıtlarda oyuncu kimliğiniz yoktur. Unity'nin bu verilerle yaptıklarına Unity'nin kendi gizlilik politikası uygulanır: https://unity.com/legal/privacy-policy",
+          ],
+        },
+        {
+          heading: "Yedekleme, yeniden kurulum ve yeni telefon",
+          paragraphs: [
+            "Oyun Android'in otomatik yedeklemesini kapatır. Yeni telefona Android'in telefondan telefona aktarımıyla geçerseniz oyunun dosyaları ve oturumu, onlarla birlikte de hesabınız gelebilir.",
+            "Oyunu silerseniz ya da böyle bir aktarım olmadan telefon değiştirirseniz oyun yeni bir hesapla baştan başlar. Eski hesap, silmemizi isteyene kadar sunucuda kalır.",
+          ],
+        },
+        {
+          heading: "Verilerinizi silmek",
+          paragraphs: [
+            "Oyunun içinden: Ayarlar > Hesap > Hesabı sil, hesabınızı ve onunla birlikte altınınızı, ödüllerinizi, denemelerinizi ve skorlarınızı sunucudan siler; telefondaki kaydın da silinip silinmeyeceğini siz seçersiniz. Oyunu kaldırmak bütün verilerini telefondan siler.",
+            "Oyun artık telefonunuzda değilse saturnwave.apps@gmail.com adresine oyuncu kodunuzla (Ayarlar > Hesap'ta yazar) yazın; hesabınızı birkaç gün içinde sileriz.",
+            "Silmeden sonra bir Lig grubunda sayılmış skorlar, grup silinene kadar (en çok 5 hafta) adınız ve kimliğiniz olmadan orada kalır; hile denetimi 3 gün boyunca kimliksiz bir işaret tutar; sunucu kayıtları 7 gün içinde silinir. E-postayla gelen isteği, oyuncu koduyla birlikte, yanıtımızın kaydı olarak 30 gün saklarız. Başka hiçbir şey kalmaz.",
+          ],
+        },
+        {
+          heading: "Kullandığımız hizmetler",
+          paragraphs: [
+            "Unity Technologies (Unity Gaming Services: oyuncu hesabı, saklama alanı, sunucu kodumuz ve tablolar) ve Google (oyunu kuran ve güncelleyen Google Play). Unity verileri ülkenizin dışında, Amerika Birleşik Devletleri dahil, işleyebilir. Verilerinizi satmayız ve başka kimseyle paylaşmayız.",
+          ],
+        },
+        {
+          heading: "Hukuki dayanak ve haklarınız",
+          paragraphs: [
+            "GDPR ya da benzeri bir yasanın uygulandığı yerlerde: oyuncu hesabı ve verileri, açtığınız Günlük bulmacayı, Turnuvayı ve Lig'i sunabilmek için gereklidir; hile denetimi bütün oyuncular için adil oyuna hizmet eder.",
+            "Verilerinizin bir kopyasını isteme, düzeltilmesini ya da silinmesini isteme ve kullanımına itiraz etme haklarınızı saturnwave.apps@gmail.com adresine yazarak kullanabilirsiniz. Ayrıca ülkenizin veri koruma kurumuna şikâyette bulunabilirsiniz.",
+          ],
+        },
+        {
+          heading: "Çocuklar",
+          paragraphs: [
+            "Oyun 13 yaşından küçük çocuklara yönelik değildir ve onlardan bilerek kişisel veri toplamayız. 13 yaşından küçük bir çocuğun bize veri verdiğini düşünüyorsanız bize yazın, sileriz.",
+          ],
+        },
+        {
+          heading: "Değişiklikler",
+          paragraphs: [
+            "Oyuna satın alma, reklam ya da başka hizmetler eklenirse bu politika onlar gelmeden önce güncellenir ve oyun gereken izni sorar. En son değişikliğin tarihi sayfanın başında yazar.",
+          ],
+        },
+      ],
+    },
+  },
+};
+
+export const games: readonly Game[] = [museumPuzzle, pastelRows];
 
 export function gameBySlug(slug: string): Game | undefined {
   return games.find((game) => game.slug === slug);
